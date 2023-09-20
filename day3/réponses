@@ -61,4 +61,10 @@ Monter le disque ect..:
 
 8> sudo chown root:lyon /opt/share/lyon && sudo chmod 750 /opt/share/lyon
 
-9> 
+9> sudo chmod 600 ~/ssh_port
+
+10> sudo useradd -g employés user-paris && sudo usermod -aG paris user-paris
+
+11> sudo useradd -g employés user-lyon && sudo usermod -aG lyon user-lyon
+
+12> à tester sur place.
