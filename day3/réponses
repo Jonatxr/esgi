@@ -33,3 +33,32 @@ PARTIE 1:
 15> cp ~/ssh_port ~/dossier1/dossier8
 
 PARTIE 2:
+
+Monter le disque ect..:
+
+- sudo fdisk -l
+- sudo fdisk /dev/sdb
+- Appuyer sur "p" pour créer une partition, suivre les instructions..
+- "w" pour quitter et enregistrer
+- sudo mkfs.ext4 /dev/sdb1 pour formater la partition en ext4 et la rendre lisible pour linux
+- sudo mkdir /mnt/Partition1 pour créer le dossier ou sera monté le disque
+- sudo mount /dev/sdb /mnt/Partition1
+(- Pour rendre le montage persistent, il faut ajouter l'UUID de la partition dans le fichier /etc/fstab/ de cette façon "UUID=Votre_UUID /mnt/my_new_partition ext4 defaults 0 0")
+
+1> touch /mnt/Partition1/test
+
+2> sudo chown kaisen:kaisen /mnt/Partition1/test
+
+3> sudo useradd -m -s /bin/zsh utilisateur (passwd utilisateur à faire)
+
+4> sudo groupadd -g 10000 paris; sudo groupadd -g 10001 lyon
+
+5> sudo mkdir /opt/share; sudo mkdir /opt/share/{paris,lyon}
+
+6> sudo groupadd -g 10999 employés
+
+7> sudo chown root:paris /opt/share/paris && sudo chmod 760 /opt/share/paris
+
+8> sudo chown root:lyon /opt/share/lyon && sudo chmod 750 /opt/share/lyon
+
+9> 
