@@ -1,0 +1,35 @@
+PARTIE 1:
+
+1> mkdir dossier1 && for number in {2..15};do mkdir dossier1/dossier$nombre;done
+
+2> cat /etc/ssh/sshd_config |grep -i -o "port 22"
+
+3> cat /etc/ssh/sshd_config |grep -i -o "port 22"| tee -a ~/sshport 
+
+4> cat /etc/passwd |wc -l
+
+5> cd ~/home/kaisen/dossier1/dossier10 , j'utilise cette commande car le "~" permet d'automatiquement se positionner au niveau du home
+
+6> touch {fichier1,fichier2}
+
+7> sort -u /etc/passwd
+
+8> sort -u /etc/passwd |tee -a ~/sshport (ou) sort -u /etc/passwd >> ~/sshport
+
+9> chmod ~/sshport 600
+
+10> chown ~/sshport root:root
+
+11> ls -l |grep ~/ssh
+
+12> wc -c /etc/shadow
+
+13> for i in {1..5}; do
+	echo "Voici une chaîne de caractères." >> ~/sshport
+    done
+
+14> rmdir, car rmdir ne supprime que si le dossier est vide
+
+15> cp ~/ssh_port ~/dossier1/dossier8
+
+PARTIE 2:
